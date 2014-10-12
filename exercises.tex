@@ -1,0 +1,74 @@
+% Notes and exercises on Undergraduate Algebra
+\documentclass[letterpaper,12pt]{article}
+\usepackage{amsmath,amssymb,amsthm,enumitem,fourier}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\DeclareMathOperator{\eval}{\mathrm{ev}}
+
+% Theorems
+\theoremstyle{definition}
+\newtheorem*{exer}{Exercise}
+
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+
+\newtheoremstyle{direction}{0.5em}{0.5em}{}{}{}{}{0.5em}{}
+\theoremstyle{direction}
+\newtheorem*{fwd}{\(\implies\)}
+\newtheorem*{bwd}{\(\impliedby\)}
+
+% Meta
+\title{\textit{Undergraduate Algebra}\\Notes and Exercises}
+\author{John Peloquin}
+\date{}
+
+\begin{document}
+\maketitle
+
+% Chapter IV
+\section*{Chapter~IV}
+
+% Section 3
+\subsection*{\S~3}
+\begin{exer}[6]
+Let \(K\)~be a subfield of a field~\(E\). Let \(f,g\in K[t]\) with \(f\)~irreducible in~\(K[t]\). Suppose there exists \(\alpha\in E\) such that \(f(\alpha)=0=g(\alpha)\). Then \(f|g\) in~\(K[t]\).
+\end{exer}
+\begin{proof}
+Let \(\eval_{\alpha}:K[t]\to E\) be the homomorphism induced by evaluation at~\(\alpha\) and let \(J=\ker\eval_{\alpha}\). By assumption, we have \(f,g\in J\). Since \(K[t]\)~is a principal ring (Theorem~2.1), \(J=(h)\) for some \(h\in K[t]\). Now in~\(K[t]\), \(h|f\) and \(h|g\), but since \(f\)~is irreducible we must also have~\(f|h\), so~\(f|g\).
+\end{proof}
+
+% Section 5
+\subsection*{\S~5}
+\begin{exer}[4 (Rational root theorem)]
+Let \(f(t)=a_nt^n+\cdots+a_0\in\Z[t]\) with \(a_n\ne0\) and \(n\ge1\). If \(f(b/c)=0\) with \(b,c\in\Z\), \(c\ne0\), and \((b,c)=1\), then \(b|a_0\) and \(c|a_n\).
+\end{exer}
+\begin{proof}
+We may assume without loss of generality that \(f\)~is primitive. Since \(f(b/c)=0\), we know \((t-b/c)|f\) in~\(\Q[t]\). But by Gauss (Theorem~5.3), this implies \((ct-b)|f\) in~\(\Z[t]\) since \((b,c)=1\). Therefore \(c|a_n\)~and~\(b|a_0\).
+\end{proof}
+\begin{rmk}
+In particular if \(a_n=1\), then all rational roots of~\(f\) are integral.
+\end{rmk}
+
+\begin{exer}[9]
+Let \(R\)~be a factorial ring and \(K\)~the quotient field of~\(R\). Let
+\[f(t)=t^d+c_{d-1}t^{d-1}+\cdots+c_0\in R[t]\qquad(d\ge2)\]
+Let \(p\in R\) be prime and let
+\[g(t)=f(t)+p/p^{nd}\in K[t]\qquad(n\ge1)\]
+Then \(g\)~is irreducible in~\(K[t]\).
+\end{exer}
+\begin{proof}
+Define \(h(t)=p^{nd}g(t/p^n)\). By direct computation,
+\[h(t)=t^d+p^nc_{d-1}t^{d-1}+\cdots+p^{n(d-1)}c_1t+p^{nd}c_0+p\in R[t]\]
+By Gauss (Theorem~6.7), it is sufficient to prove that \(h\)~is irreducible in~\(R[t]\). But this follows from Eisenstein (Theorem~6.10) since \(p\)~divides all except the leading coefficient and \(p^2\)~does not divide the constant coefficient.
+\end{proof}
+\begin{rmk}
+Let \(R=\Z\) so \(K=\Q\). Observe that \(g(t)\to f(t)\) as \(n\to\infty\). Therefore there are irreducible polynomials arbitrarily close to~\(f\), with roots arbitrarily close to those of~\(f\). In particular, if \(f\)~has exactly \(d-k\) distinct real roots, then \(g\)~also has exactly \(d-k\) distinct real roots for \(n\)~sufficiently large. (See Exercise~7.)
+\end{rmk}
+
+% References
+\begin{thebibliography}{0}
+\bibitem{lang} Lang, Serge. \textit{Undergraduate Algebra, 3rd ed.} Springer, 2005.
+\end{thebibliography}
+\end{document}
