@@ -67,6 +67,36 @@ By Gauss (Theorem~6.7), it is sufficient to prove that \(h\)~is irreducible in~\
 Let \(R=\Z\) so \(K=\Q\). Observe that \(g(t)\to f(t)\) as \(n\to\infty\). Therefore there are irreducible polynomials arbitrarily close to~\(f\), with roots arbitrarily close to those of~\(f\). In particular, if \(f\)~has exactly \(d-k\) distinct real roots, then \(g\)~also has exactly \(d-k\) distinct real roots for \(n\)~sufficiently large. (See Exercise~7.)
 \end{rmk}
 
+% Chapter VII
+\section*{Chapter~VII}
+
+% Section 1
+\subsection*{\S~1}
+\begin{exer}[11]
+Let \(F\)~be a field, \(E\)~a finite extension of~\(F\), and \(F'\)~an arbitrary extension of~\(F\), with \(E\)~and~\(F'\) both contained in some common extension. Then the composite~\(EF'\) is finite over~\(F'\), and
+\[[EF':F']\le[E:F]\]
+\end{exer}
+\begin{proof}
+Since \(E/F\)~is finite, it is finitely generated and algebraic (Theorem~1.1). Suppose \(E=F(\alpha)\) with \(\alpha\)~algebraic over~\(F\). We claim \(EF'=F'(\alpha)\). Indeed, by definitions both are the smallest extensions of~\(F\) containing \(F'\)~and~\(\alpha\), so they are equal. Now \(\alpha\)~is trivially algebraic over~\(F'\) since it is algebraic over~\(F\), so \(F'(\alpha)/F'\) is finite and
+\[[EF':F']=[F'(\alpha):F']=\deg_{F'}\alpha\le\deg_F\alpha=[F(\alpha):F]=[E:F]\]
+since simple algebraic extensions are finite (Theorem~1.3) and the minimal polynomial of~\(\alpha\) over~\(F'\) must divide the minimal polynomial of~\(\alpha\) over~\(F\). The general case \(E=F(\alpha_1,\cdots,\alpha_k)\) now follows by induction and application of the tower law (Theorem~1.4).
+\end{proof}
+
+\begin{exer}[12]
+Let \(F\)~be a field and let \(E_1\)~and~\(E_2\) be finite extensions of~\(F\) with relatively prime degrees over~\(F\), both contained in some common extension. Then the composite~\(E_1E_2\) is finite over~\(F\) and
+\[[E_1E_2:F]=[E_1:F][E_2:F]\]
+\end{exer}
+\begin{proof}
+Since \(E_1E_2/E_2\)~is a translation of the finite extension~\(E_1/F\), it follows that \(E_1E_2/E_2\)~is finite and \([E_1E_2:E_2]\le[E_1:F]\) (Exercise~11). Now by the tower law (Theorem~1.4), \(E_1E_2/F\)~is finite and
+\[[E_1E_2:F]=[E_1E_2:E_2][E_2:F]\]
+By symmetry,
+\[[E_1E_2:F]=[E_1E_2:E_1][E_1:F]\]
+Since \([E_1:F]\)~and~\([E_2:F]\) are relatively prime, \([E_1:F]\)~divides~\([E_1E_2:E_2]\), so \([E_1E_2:E_2]=[E_1:F]\) as desired.
+\end{proof}
+\begin{rmk}
+This result shows that translation of a finite extension over a finite extension of relatively prime degree preserves degree. Because degree is an isomorphism type for finite extensions (viewed as finite dimensional vector spaces), this result is analogous to a diamond isomorphism theorem.
+\end{rmk}
+
 % References
 \begin{thebibliography}{0}
 \bibitem{lang} Lang, Serge. \textit{Undergraduate Algebra, 3rd ed.} Springer, 2005.
