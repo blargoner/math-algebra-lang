@@ -97,6 +97,15 @@ Since \([E_1:F]\)~and~\([E_2:F]\) are relatively prime, \([E_1:F]\)~divides~\([E
 This result shows that translation of a finite extension over a finite extension of relatively prime degree preserves degree. Because degree is an isomorphism type for finite extensions (viewed as finite dimensional vector spaces), this result is analogous to a diamond isomorphism theorem.
 \end{rmk}
 
+% Section 3
+\subsection*{\S~3}
+\begin{exer}[6]
+Let \(F\)~be a field of characteristic~\(0\) and \(A\)~an algebraic extension of~\(F\) such that for all \(f\in F[t]\) with \(\deg f\ge1\) there exists \(\alpha\in A\) with \(f(\alpha)=0\). Then \(A\)~is algebraically closed.
+\end{exer}
+\begin{proof}
+Let \(f(t)=a_nt^n+\cdots+a_0\in A[t]\) with \(a_n\ne0\) and \(n\ge1\). Let \(\alpha\)~be a root of~\(f\) in some extension of~\(A\) (Theorem~2.2). We claim \(\alpha\in A\). Observe \(\alpha\)~is algebraic over~\(F\) since \(\alpha\in F(a_1,\ldots,a_n,\alpha)\), an algebraic extension of~\(F\) (Theorem~1.4). Let \(K\)~be a splitting field for the minimal polynomial of~\(\alpha\) over~\(F\) in some extension of~\(A\) (Theorem~3.1) so that \(\alpha\in K\). Since \(F\)~has characteristic~\(0\), \(K=F(\gamma)\) for some primitive element~\(\gamma\in K\) (Theorem~2.5). Now by assumption the minimal polynomial of~\(\gamma\) over~\(F\) has a root~\(\gamma'\in A\), and \(K=F(\gamma')\subseteq A\) since \(K\)~is normal (Theorems~3.3--4). Therefore \(\alpha\in A\) as desired.
+\end{proof}
+
 % References
 \begin{thebibliography}{0}
 \bibitem{lang} Lang, Serge. \textit{Undergraduate Algebra, 3rd ed.} Springer, 2005.
