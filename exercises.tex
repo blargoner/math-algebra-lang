@@ -5,6 +5,8 @@
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Q}{\mathbb{Q}}
 
+\newcommand{\sect}{\cap}
+
 \DeclareMathOperator{\eval}{\mathrm{ev}}
 
 % Theorems
@@ -105,6 +107,12 @@ Let \(F\)~be a field of characteristic~\(0\) and \(A\)~an algebraic extension of
 \begin{proof}
 Let \(f(t)=a_nt^n+\cdots+a_0\in A[t]\) with \(a_n\ne0\) and \(n\ge1\). Let \(\alpha\)~be a root of~\(f\) in some extension of~\(A\) (Theorem~2.2). We claim \(\alpha\in A\). Observe \(\alpha\)~is algebraic over~\(F\) since \(\alpha\in F(a_1,\ldots,a_n,\alpha)\), an algebraic extension of~\(F\) (Theorem~1.4). Let \(K\)~be a splitting field for the minimal polynomial of~\(\alpha\) over~\(F\) in some extension of~\(A\) (Theorem~3.1) so that \(\alpha\in K\). Since \(F\)~has characteristic~\(0\), \(K=F(\gamma)\) for some primitive element~\(\gamma\in K\) (Theorem~2.5). Now by assumption the minimal polynomial of~\(\gamma\) over~\(F\) has a root~\(\gamma'\in A\), and \(K=F(\gamma')\subseteq A\) since \(K\)~is normal (Theorems~3.3--4). Therefore \(\alpha\in A\) as desired.
 \end{proof}
+
+% Section 4
+\subsection*{\S~4}
+\begin{rmk}
+In the proof of Theorem~4.5 on p.~285, to prove that the restriction map \(G_{KE/E}\to G_{K/(K\sect E)}\) is surjective observe that the image is a subgroup whose fixed field is~\(K\sect E\). Indeed, clearly \(K\sect E\)~is fixed, and if \(\alpha\in K-K\sect E\), then \(\alpha\in KE-E\), so there exists \(\sigma\in G_{KE/E}\) with \(\sigma\alpha\ne\alpha\). But then \(\sigma|_K\alpha\ne\alpha\). By the Galois correspondence (Theorem~4.2), this subgroup must be~\(G_{K/(K\sect E)}\).
+\end{rmk}
 
 % References
 \begin{thebibliography}{0}
