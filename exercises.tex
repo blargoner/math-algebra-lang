@@ -4,6 +4,7 @@
 
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
 
 \newcommand{\sect}{\cap}
 
@@ -113,6 +114,40 @@ Let \(f(t)=a_nt^n+\cdots+a_0\in A[t]\) with \(a_n\ne0\) and \(n\ge1\). Let \(\al
 \begin{rmk}
 In the proof of Theorem~4.5 on p.~285, to prove that the restriction map \(G_{KE/E}\to G_{K/(K\sect E)}\) is surjective observe that the image is a subgroup whose fixed field is~\(K\sect E\). Indeed, clearly \(K\sect E\)~is fixed, and if \(\alpha\in K-K\sect E\), then \(\alpha\in KE-E\), so there exists \(\sigma\in G_{KE/E}\) with \(\sigma\alpha\ne\alpha\). But then \(\sigma|_K\alpha\ne\alpha\). By the Galois correspondence (Theorem~4.2), this subgroup must be~\(G_{K/(K\sect E)}\).
 \end{rmk}
+
+% Chapter VIII
+\section*{Chapter~VIII}
+
+% Section 1
+\subsection*{\S~1}
+\begin{rmk}
+\(\F_{q^m}\subseteq\F_{q^n}\) if and only if~\(m|n\). Indeed, if \(m|n\) and \(\alpha\in\F_{q^m}\), we claim \(\alpha^{q^{mk}}=\alpha\) for all~\(k\). For \(k=1\) this holds since \(\F_{q^m}\)~consists of the roots of \(t^{q^m}-t\) (Theorem~1.2). For \(k>1\) we have by induction
+\[\alpha^{q^{mk}}=\alpha^{q^{m(k-1)+m}}=\alpha^{q^{m(k-1)}q^m}=\bigl(\alpha^{q^{m(k-1)}}\bigr)^{q^m}=\alpha^{q^m}=\alpha\]
+Now in particular \(\alpha^{q^n}=\alpha\), so \(\alpha\in\F_{q^n}\) (Theorem~1.2) as desired. Conversely, if \(\F_{q^m}\subseteq\F_{q^n}\), then by the above and the tower law we have
+\[[\F_{q^n}:\F_q]=[\F_{q^n}:\F_{q^m}][\F_{q^m}:\F_q]\]
+But \([\F_{q^n}:\F_q]=n\) and \([\F_{q^m}:\F_q]=m\) (Theorem~1.1), so~\(m|n\) as desired.
+\end{rmk}
+
+\begin{exer}[1]
+Let \(g(t)=t^{q^n}-t\).
+\begin{enumerate}[itemsep=0pt]
+\item[(a)] If \(f\in\F_q[t]\) is irreducible of degree~\(m\), then \(f|g\)~if and only if~\(m|n\).
+\item[(b)] If \(I_m\)~is the set of monic irreducible polynomials of degree~\(m\) over~\(\F_q\),
+\[g(t)=\prod_{m|n}\prod_{f\in I_m}f(t)\]
+\item[(c)] If \(\psi(m)\)~is the size of~\(I_m\),
+\[q^n=\sum_{m|n}m\psi(m)\]
+\item[(d)] If \(\mu\)~is the Mobius function, then
+\[\psi(n)=\frac{1}{n}\sum_{m|d}\mu(m)q^{n/m}\]
+\end{enumerate}
+\end{exer}
+\begin{proof}\
+\begin{enumerate}[itemsep=0pt]
+\item[(a)] Let \(\alpha\)~be a root of~\(f\), so \(m=\deg_{\F_q}\alpha\). Then \(\F_q(\alpha)=\F_{q^m}\) by uniqueness of finite fields. Now \(f|g\)~if and only if \(\alpha\)~is a root of~\(g\), which holds if and only if \(\alpha\in\F_{q^n}\) (Theorem~1.2), which holds if and only if \(\F_{q^m}\subseteq\F_{q^n}\), which holds if and only if~\(m|n\) by the above remark.
+\item[(b)] Immediate from~(a).
+\item[(c)] Immediate from~(b) and degrees of the polynomials.
+\item[(d)] Immediate from~(c) and Mobius inversion.\qedhere
+\end{enumerate}
+\end{proof}
 
 % References
 \begin{thebibliography}{0}
